@@ -1,0 +1,31 @@
+//
+//  ViewController.swift
+//  GettingStarded2
+//
+//  Created by Antonio Medina on 03/09/25.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        
+       
+    }
+
+    @IBAction func didTapNextVc(_ sender: Any) {
+        
+        //Aqui Hay q Hacer la instancia
+        let storyboard = UIStoryboard(name: "Main", bundle:.main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "VC2")
+        
+        navigationController?.pushViewController(vc, animated: true)
+        
+        
+    }
+    
+}
+

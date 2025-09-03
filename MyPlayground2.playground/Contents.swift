@@ -1,1 +1,1 @@
-let max: Int = Int.max 
+let max: Int = Int.max
