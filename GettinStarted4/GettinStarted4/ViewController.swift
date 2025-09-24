@@ -9,14 +9,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let dataStore: DataStoreProtocol = DataStore()
     
     @IBOutlet weak var user: UITextField!
     
     
     @IBOutlet weak var password: UITextField!
     
+    @IBAction func login(_ sender: Any) {
+        let user = dataStore.obtain(username: username.text ?? "")
+        
+        if user?.username == username.text && user?.userActivity == password.text {
+            
+        }
+    }
     
-    @IBOutlet weak var login: UIButton!
 }
 
 

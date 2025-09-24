@@ -7,11 +7,26 @@
 
 import Foundation
 
-struct User{
-    
+struct User: Codable{
     let username: String
     let password: String
     let laslogged: Date
     let expiratinDate: Date
+    
+    var asJason: String {
+        let encoder = JSONEncoder()
+        let data = try? encoder.encode(self) else {return }
+        return String(data: data, encoding: .utf8)
+    }
+}
+
+extension User {
+    static let mock = User {
+    username: "",
+    password: "",
+        laslogged: Date(),
+        expiratinDate: Date()
+    }
+    
 }
 
